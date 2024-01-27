@@ -1,5 +1,5 @@
-function bg(col)
-	col = col or "rose-pine"
+function Bg(col)
+	col = col or "tokyonight"
 	vim.cmd.colorscheme(col)
 	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
@@ -18,18 +18,8 @@ return {
 				sidebars = "dark",
 				floats = "dark",
 			},
+            Bg()
 		})
 	end,
-	},
-	{
-		"rose-pine/neovim",
-		name = "rose-pine",
-		config = function()
-			vim.cmd("colorscheme rose-pine")
-			require("rose-pine").setup({
-				disable_background = true,
-			})
-			bg()
-		end,
 	},
 }

@@ -48,3 +48,9 @@ opt.hlsearch = false
 opt.incsearch = true
 
 opt.colorcolumn = "80"
+
+vim.cmd([[
+  filetype on
+  filetype plugin on
+  filetype indent on
+]])

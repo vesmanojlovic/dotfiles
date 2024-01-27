@@ -1,0 +1,23 @@
+#!/bin/sh
+
+[ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d" \
+
+alias \
+        cp="cp -iv" \
+        mv="mv -iv" \
+        rm="rm -vI" \
+        bc="bc -ql" \
+        mkd="mkdir -pv" \
+        ls="ls -h --color=auto" \
+        grep="grep --color=auto" \
+        v="$EDITOR" \
+        e="$EDITOR" \
+        ssh="kitten ssh" \
+        l="ls -alh" \
+
+alias yabairestart="yabai --stop-service; \
+skhd --stop-service; \
+yabai --start-service; \
+skhd --start-service"
+
+alias pip="pip3"
