@@ -7,6 +7,7 @@ return {
             vim.api.nvim_set_keymap('n', key, command, opts)
         end
         map('<leader>gs', ':Git<CR>') -- Git status
+        map('<leader>ga', ':Git add %<CR>') -- Git add current file
         map('<leader>gm', ':Git commit<CR>') -- Git commit
         map('<leader>gl', ':Git push<CR>') -- Git push
         map('<leader>gh', ':Git pull<CR>') -- Git pull

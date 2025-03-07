@@ -1,13 +1,7 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.config/zsh/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # colours
 autoload -U colors && colors
 setopt autocd
+stty stop undef
 setopt interactive_comments
 
 # load aliases
@@ -21,12 +15,9 @@ setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
 
 # history search
-autoload -Uz up-line-or-beginning-search
-autoload -Uz down-line-or-beginning-search
+autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
 zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
-bindkey "^[[A" up-line-or-beginning-search # Up
-bindkey "^[[B" down-line-or-beginning-search # Down
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -80,19 +71,3 @@ source "${PLUGINS_HOME}/fsh/fast-syntax-highlighting.plugin.zsh" # syntax highli
 #source "${PLUGINS_HOME}/gitprompt/git-prompt.zsh" # prompt
 [ -f "$HOME/.fzf.zsh" ] && source "$HOME/.fzf.zsh" # fuzzy search
 source "${PLUGINS_HOME}/powerlevel10k/powerlevel10k.zsh-theme" # prompt
-
-# To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
-[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
-
-# pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-if command -v pyenv 1>/dev/null 2>&1; then
-    eval "$(pyenv init --path)"
-    eval "$(pyenv init -)"
-    eval "$(pyenv virtualenv-init -)"
-fi
-
-export TERM=xterm-kitty
-
-. "$HOME/.local/share/../bin/env"

@@ -4,6 +4,7 @@ require("vesheljinn")
 vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0
 vim.g.netrw_winsize = 25
+vim.opt.termguicolors = true
 
 local augroup = vim.api.nvim_create_augroup
 local VesGroup = augroup("VesGroup", {})

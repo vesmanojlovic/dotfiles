@@ -1,0 +1,5 @@
+[mpd]
+mpd_music_dir = "/Users/vesheljinn/Music"
+mpd_host = "localhost"
+mpd_port = "6600"
+mpd_crossfade_time = "1"

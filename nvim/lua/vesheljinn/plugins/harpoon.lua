@@ -1,7 +1,7 @@
 return {
 	"ThePrimeagen/harpoon",
 	branch = "harpoon2",
-	depends = {
+	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"nvim-telescope/telescope.nvim"
 	},
@@ -19,8 +19,8 @@ return {
 		vim.keymap.set("n", "<C-9>", function() harpoon:list():select(3) end)
 		vim.keymap.set("n", "<C-0>", function() harpoon:list():select(4) end)
 		-- toggle prev & next buffers in harpoon list
-		vim.keymap.set("n", "<C-S-j>", function() harpoon:list():prev() end)
-		vim.keymap.set("n", "<C-S-k>", function() harpoon:list():next() end)
+		vim.keymap.set("n", "<C-S-J>", function() harpoon:list():prev() end)
+		vim.keymap.set("n", "<C-S-K>", function() harpoon:list():next() end)
 		-- delete list entries
 		vim.keymap.set("n", "<leader>d", function() harpoon:list():remove() end) -- remove current buffer from harpoon list
 		vim.keymap.set("n", "<C-S-d>", function() harpoon:list():clear() end) -- clear harpoon list
