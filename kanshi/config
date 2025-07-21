@@ -1,0 +1,4 @@
+profile {
+    output 'Dell Inc. DELL U3219Q 3DBT413' position 0, 0
+    output eDP-1 disable
+}
