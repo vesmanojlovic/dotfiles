@@ -11,7 +11,7 @@ return {
 		-- setup
 		harpoon:setup({})
 		-- keybindings
-		vim.keymap.set("n", "<leader>a", function() harpoon:list():append() end)
+		vim.keymap.set("n", "<leader>a", function() harpoon:list():add() end)
 		vim.keymap.set("n", "<C-e>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
 		-- quick dial
 		vim.keymap.set("n", "<C-7>", function() harpoon:list():select(1) end)

@@ -9,12 +9,12 @@ return {
     opts = {
         workspaces = {
             {
-                name = "Vault_1",
-                path = "~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault_1",
+                name = "Work_vault",
+                path = "/home/vesmanojlovic/Documents/Obsidian/Work_vault",
             },
             {
-                name = "Work_vault",
-                path = "~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Work_vault",
+                name = "Writing_vault",
+                path = "/home/vesmanojlovic/Documents/Obsidian/Writing_vault",
             },
         }
     }
