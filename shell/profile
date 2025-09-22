@@ -1,5 +1,7 @@
 #!bin/sh
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 export PATH="$PATH:$(find ~/.local/bin -type d | paste -sd ':' -)"
 
 unsetopt PROMPT_SP 2>/dev/null

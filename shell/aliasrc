@@ -15,9 +15,8 @@ alias \
         ssh="kitten ssh" \
         l="ls -alh" \
 
-alias yabairestart="yabai --stop-service; \
-skhd --stop-service; \
-yabai --start-service; \
-skhd --start-service"
+alias skhdrestart="skhd --stop-service; \
+skhd --start-service \
+skhd &"
 
 alias pip="pip3"

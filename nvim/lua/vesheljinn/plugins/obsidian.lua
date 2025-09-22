@@ -16,6 +16,10 @@ return {
                 name = "Work_vault",
                 path = "~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Work_vault",
             },
+            {
+                name = "worldbuilding",
+                path = "~/Documents/Gaming/worldbuilding",
+            },
         }
     }
 }
