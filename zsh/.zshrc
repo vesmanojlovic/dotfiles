@@ -95,4 +95,4 @@ fi
 
 export TERM=xterm-kitty
 
-. "$HOME/.local/share/../bin/env"
+# . "$HOME/.local/share/../bin/env"

@@ -28,18 +28,18 @@ return {
     require("mason").setup({})
     require("mason-lspconfig").setup({
       ensure_installed = {
-        "bashls",
-        "clangd",
-        "cmake",
-        "html",
-        "jsonls",
-        "lua_ls",
-        "marksman",
-        "pyright",
-        "r_language_server",
-        "texlab",
-        "vimls",
-        "yamlls",
+        -- "bashls",
+        -- "clangd",
+        -- "cmake",
+        -- "html",
+        -- "jsonls",
+        -- "lua_ls",
+        -- "marksman",
+        -- "pyright",
+        -- "r_language_server",
+        -- "texlab",
+        -- "vimls",
+        -- "yamlls",
       },
       handlers = {
         function (server_name)
