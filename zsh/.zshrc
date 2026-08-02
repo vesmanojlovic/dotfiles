@@ -78,7 +78,8 @@ bindkey -M visual '^[[P' vi-delete
 # plugins
 source "${PLUGINS_HOME}/fsh/fast-syntax-highlighting.plugin.zsh" # syntax highlighting
 #source "${PLUGINS_HOME}/gitprompt/git-prompt.zsh" # prompt
-[ -f "$HOME/.fzf.zsh" ] && source "$HOME/.fzf.zsh" # fuzzy search
+[ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh # fuzzy search
+[ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
 source "${PLUGINS_HOME}/powerlevel10k/powerlevel10k.zsh-theme" # prompt
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
@@ -96,3 +97,12 @@ fi
 export TERM=xterm-kitty
 
 # . "$HOME/.local/share/../bin/env"
+source /usr/share/g/g_source.sh
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# CUDA
+export CUDA_HOME=/opt/cuda
+export PATH=$PATH:/opt/cuda/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/cuda/lib64
+
+source /home/vesheljinn/.config/broot/launcher/bash/br
