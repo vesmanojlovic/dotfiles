@@ -1,0 +1,22 @@
+# This repo only tracks the Hyprland/Quickshell ricing dotfiles - ignore
+# everything else by default (the rest of ~/.config is app configs like
+# Brave, Discord, RStudio, etc. that don't belong in a dotfiles repo).
+*
+
+!.gitignore
+
+!hypr/
+!hypr/**
+
+!quickshell/
+!quickshell/**
+
+!awww/
+!awww/**
+
+!mpDris2/
+!mpDris2/**
+
+# WireGuard configs contain private keys - never commit these even though
+# the directory itself would otherwise be allowed under hypr-adjacent paths.
+wireguard-configs/
